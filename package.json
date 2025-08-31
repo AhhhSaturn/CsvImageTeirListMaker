@@ -1,0 +1,17 @@
+{
+  "name": "csvimageteirlistmaker",
+  "module": "index.ts",
+  "type": "module",
+  "devDependencies": {
+    "@types/bun": "latest"
+  },
+  "scripts": {
+    "build": "bun build ./index.ts --compile --outfile csvimg"
+  },
+  "peerDependencies": {
+    "typescript": "^5"
+  },
+  "dependencies": {
+    "canvas": "^3.2.0"
+  }
+}
