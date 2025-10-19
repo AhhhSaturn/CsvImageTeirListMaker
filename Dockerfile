@@ -8,7 +8,7 @@ COPY bun.lock bun.lock
 
 RUN bun install
 
-COPY ./src ./src
+COPY ./ ./
 
 ENV NODE_ENV=production
 
@@ -18,7 +18,7 @@ FROM gcr.io/distroless/base
 
 WORKDIR /app
 
-COPY --from=build /app/csvimg csvimg
+COPY --from=build /app/dist/csvimg csvimg
 
 ENV NODE_ENV=production
 ENV SERVER_EDITION=true
